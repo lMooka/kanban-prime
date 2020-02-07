@@ -29,7 +29,7 @@ public abstract class CrudController<M, S extends ICrudService<M, K>, K> {
     public M save(@RequestBody M model) {
         return service.save(model);
     }
-
+git
     @ResponseStatus(value = HttpStatus.OK)
     @DeleteMapping
     public void delete(@RequestBody M model) {
