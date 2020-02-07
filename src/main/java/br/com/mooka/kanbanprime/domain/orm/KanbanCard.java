@@ -1,14 +1,13 @@
 package br.com.mooka.kanbanprime.domain.orm;
 
 import br.com.mooka.kanbanprime.service.IEntityId;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
-import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
-@Data
 @Entity
 @Builder
 @AllArgsConstructor
@@ -20,13 +19,9 @@ public class KanbanCard implements IEntityId<Integer> {
     @Column(name = "card_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cardId;
-    @Column
     private String title;
-    @Column
     private String content;
-    @Column
     private String version;
-    @Column
     private String priority;
 
     @ManyToOne
@@ -34,14 +29,8 @@ public class KanbanCard implements IEntityId<Integer> {
     @JsonIgnore
     private KanbanColumn kanbanColumn;
 
-    public KanbanCard(String title, String content, String version, String priority) {
-        this.title = title;
-        this.content = content;
-        this.version = version;
-        this.priority = priority;
-    }
-
     @Override
+    @JsonIgnore
     public Integer getEntityId() {
         return cardId;
     }

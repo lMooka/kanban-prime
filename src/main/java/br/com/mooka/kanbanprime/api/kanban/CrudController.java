@@ -19,20 +19,20 @@ public abstract class CrudController<M, S extends ICrudService<M, K>, K> {
     }
 
     @ResponseStatus(value = HttpStatus.OK)
-    @GetMapping("/")
+    @GetMapping
     public Iterable<M> getAll() {
         return service.findAll();
     }
 
     @ResponseStatus(value = HttpStatus.OK)
-    @PostMapping("/")
-    public M save(M model) {
+    @PostMapping
+    public M save(@RequestBody M model) {
         return service.save(model);
     }
 
     @ResponseStatus(value = HttpStatus.OK)
-    @DeleteMapping("/")
-    public void delete(M model) {
+    @DeleteMapping
+    public void delete(@RequestBody M model) {
         service.delete(model);
     }
 }

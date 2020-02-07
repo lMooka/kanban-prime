@@ -2,6 +2,7 @@ package br.com.mooka.kanbanprime.domain.orm;
 
 import br.com.mooka.kanbanprime.service.IEntityId;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
@@ -29,6 +30,7 @@ public class KanbanBoard implements IEntityId<Integer> {
     private List<KanbanColumn> columns;
 
     @Override
+    @JsonIgnore
     public Integer getEntityId() {
         return 0;
     }

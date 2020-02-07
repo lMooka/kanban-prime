@@ -2,7 +2,7 @@ package br.com.mooka.kanbanprime.domain.orm;
 
 import br.com.mooka.kanbanprime.service.IEntityId;
 import lombok.*;
-import net.minidev.json.annotate.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
@@ -38,6 +38,7 @@ public class KanbanColumn implements IEntityId<Integer> {
     }
 
     @Override
+    @JsonIgnore
     public Integer getEntityId() {
         return columnId;
     }

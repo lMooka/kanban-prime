@@ -21,12 +21,12 @@ public class InitDb implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         kanbanColumnRepository.save(
-                new KanbanColumn("homologa")
+                KanbanColumn.builder().title("title").description("description").build()
         );
 
         kanbanCardRepository.save(
                 //new KanbanCardEntity()
-                new KanbanCard("the hue name", "the hue content", "the hue version", "the hue priority")
+                KanbanCard.builder().title("title").content("content").priority("0").version("1").build()
         );
     }
 }
