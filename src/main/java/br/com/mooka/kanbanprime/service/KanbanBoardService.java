@@ -1,5 +1,6 @@
 package br.com.mooka.kanbanprime.service;
 
+import br.com.mooka.framework.crudapi.CrudServiceImpl;
 import br.com.mooka.kanbanprime.domain.orm.KanbanBoard;
 import br.com.mooka.kanbanprime.domain.repository.KanbanBoardRepository;
 import org.springframework.stereotype.Service;

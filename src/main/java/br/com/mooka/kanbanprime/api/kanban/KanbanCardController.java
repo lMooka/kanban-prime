@@ -1,5 +1,6 @@
 package br.com.mooka.kanbanprime.api.kanban;
 
+import br.com.mooka.framework.crudapi.CrudController;
 import br.com.mooka.kanbanprime.domain.orm.KanbanCard;
 import br.com.mooka.kanbanprime.service.KanbanCardService;
 import org.springframework.web.bind.annotation.RequestMapping;

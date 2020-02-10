@@ -1,6 +1,6 @@
 package br.com.mooka.kanbanprime.domain.orm;
 
-import br.com.mooka.kanbanprime.service.IEntityId;
+import br.com.mooka.framework.crudapi.IEntityId;
 import lombok.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

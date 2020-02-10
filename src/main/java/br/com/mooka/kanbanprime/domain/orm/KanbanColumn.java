@@ -1,6 +1,6 @@
 package br.com.mooka.kanbanprime.domain.orm;
 
-import br.com.mooka.kanbanprime.service.IEntityId;
+import br.com.mooka.framework.crudapi.IEntityId;
 import lombok.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -31,7 +31,7 @@ public class KanbanColumn implements IEntityId<Integer> {
     @ManyToOne
     @JoinColumn(name = "board_id")
     @JsonIgnore
-    private KanbanBoard kanbanBoard;
+    private KanbanBoard board;
 
     public KanbanColumn(String title) {
         this.title = title;

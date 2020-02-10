@@ -20,13 +20,15 @@ public class InitDb implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
+        var column = KanbanColumn.builder().title("title").description("description").build();
+
         kanbanColumnRepository.save(
-                KanbanColumn.builder().title("title").description("description").build()
+                column
         );
 
         kanbanCardRepository.save(
                 //new KanbanCardEntity()
-                KanbanCard.builder().title("title").content("content").priority("0").version("1").build()
+                KanbanCard.builder().title("title").content("content").priority("0").version("1").column(column).build()
         );
     }
 }

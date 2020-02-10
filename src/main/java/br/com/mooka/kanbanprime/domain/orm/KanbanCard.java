@@ -1,6 +1,6 @@
 package br.com.mooka.kanbanprime.domain.orm;
 
-import br.com.mooka.kanbanprime.service.IEntityId;
+import br.com.mooka.framework.crudapi.IEntityId;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
@@ -27,7 +27,7 @@ public class KanbanCard implements IEntityId<Integer> {
     @ManyToOne
     @JoinColumn(name = "column_id")
     @JsonIgnore
-    private KanbanColumn kanbanColumn;
+    private KanbanColumn column;
 
     @Override
     @JsonIgnore

@@ -1,4 +1,4 @@
-package br.com.mooka.kanbanprime.service;
+package br.com.mooka.framework.crudapi;
 
 import org.springframework.data.repository.CrudRepository;
 

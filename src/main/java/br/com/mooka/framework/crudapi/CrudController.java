@@ -1,6 +1,6 @@
-package br.com.mooka.kanbanprime.api.kanban;
+package br.com.mooka.framework.crudapi;
 
-import br.com.mooka.kanbanprime.service.ICrudService;
+import br.com.mooka.framework.crudapi.ICrudService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +29,7 @@ public abstract class CrudController<M, S extends ICrudService<M, K>, K> {
     public M save(@RequestBody M model) {
         return service.save(model);
     }
-git
+
     @ResponseStatus(value = HttpStatus.OK)
     @DeleteMapping
     public void delete(@RequestBody M model) {
